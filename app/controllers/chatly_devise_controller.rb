@@ -1,5 +1,5 @@
 class ChatlyDeviseController < ApplicationController
-    class Responder < ApplicationController::Responder
+    class Responder < ActionController::Responder
         def to_chatly_stream
             controller.render(options.merge(formats: :html))
         rescue ActionView::MissingTemplate => e
