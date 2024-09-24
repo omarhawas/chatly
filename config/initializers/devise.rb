@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-class TurboFailureApp < Devise::FailureApp
+class ChatlyFailureApp < Devise::FailureApp
   def respond
     if request_format == :turbo_stream
       redirect
@@ -43,7 +43,7 @@ Devise.setup do |config|
   # ==> Warden configuration
   # ...
   config.warden do |manager|
-    manager.failure_app = TurboFailureApp
+    manager.failure_app = ChatlyFailureApp
     #   manager.intercept_401 = false
     #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   end
