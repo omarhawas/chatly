@@ -1,4 +1,4 @@
-class ChatlyDeviseController < ApplicationController
+class TurboDeviseController < ApplicationController
     class Responder < ActionController::Responder
         def to_chatly_stream
             controller.render(options.merge(formats: :html))
